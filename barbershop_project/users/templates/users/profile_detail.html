@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Мой профиль</h2>
+    <div class="card">
+        <div class="card-body">
+            <p><strong>Имя пользователя:</strong> {{ user_profile.username }}</p>
+            <p><strong>Email:</strong> {{ user_profile.email }}</p>
+            <p><strong>Имя:</strong> {{ user_profile.first_name }}</p>
+            <p><strong>Фамилия:</strong> {{ user_profile.last_name }}</p>
+            <a href="{% url 'profile_edit' %}" class="btn btn-primary">Редактировать</a>
+            <a href="{% url 'password_change' %}" class="btn btn-secondary">Сменить пароль</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
