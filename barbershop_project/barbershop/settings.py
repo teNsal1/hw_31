@@ -125,3 +125,12 @@ if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
 LOGIN_URL = 'login'          # Куда перенаправлять для входа
 LOGIN_REDIRECT_URL = '/'     # После входа - на главную
 LOGOUT_REDIRECT_URL = '/'    # После выхода - на главную
+
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.example.com'  # Можно оставить пустым для консольного бэкенда
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = 'webmaster@example.com'
